@@ -8,6 +8,7 @@ wwr = extract_wwr_jobs(keyword)
 
 jobs = indeed + wwr
 
+# 개행문자때문에 파일오픈 형식 지정
 file = open(f"{keyword}.csv", "w", encoding="utf-8")
 file.write("Position,Company,Location,URL")
 

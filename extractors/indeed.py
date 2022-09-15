@@ -9,7 +9,7 @@ def get_page_count(keyword):
     base_url = "https://www.indeed.com/jobs?q="
     browser.get(f"{base_url}{keyword}")
     time.sleep(1)
-
+    # 봇으로 알려진 라이브러리를 블로킹하여 403에러 반환됨 따라서 셀레닝움을 통해서 크롬브라우저를 띄워서 크롤링진행
     response = browser.page_source
     soup = BeautifulSoup(response, "html.parser")
     pagination = soup.find("ul", class_="pagination-list")
